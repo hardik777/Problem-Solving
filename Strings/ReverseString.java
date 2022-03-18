@@ -1,3 +1,16 @@
+// Problem Description
+// Write a program to reverse the words present in a string. Everything else should be preserved.
+// Check example input/output. Note: There are no punctuation and special characters in the string.
+// The string will only contain alphanumeric characters and spaces.
+
+
+// Example Input
+// Everyone loves data science
+
+
+// Example Output
+// enoyrevE sevol atad ecneics
+
 import java.util.Scanner;
 
 public class ReverseString {

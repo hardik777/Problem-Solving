@@ -1,0 +1,83 @@
+package com.demo.scaler.Maths;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+
+public class PairSumDivisibleByM {
+    //Problem Description
+    //Given an array of integers A and an integer B, find and return the number of pairs in A whose sum is divisible by B.
+    //
+    //Since the answer may be large, return the answer modulo (109 + 7).
+    //
+    //
+    //
+    //Problem Constraints
+    //1 <= length of the array <= 100000
+    //1 <= A[i] <= 109
+    //1 <= B <= 106
+    //
+    //
+    //
+    //Input Format
+    //The first argument given is the integer array A.
+    //The second argument given is the integer B.
+    //
+    //
+    //
+    //Output Format
+    //Return the total number of pairs for which the sum is divisible by B modulo (109 + 7).
+    //
+    //
+    //
+    //Example Input
+    //Input 1:
+    //
+    // A = [1, 2, 3, 4, 5]
+    // B = 2
+    //Input 2:
+    //
+    // A = [5, 17, 100, 11]
+    // B = 28
+    //
+    //
+    //Example Output
+    //Output 1:
+    //
+    // 4
+    //Output 2:
+    //
+    // 1
+    //
+    //
+    //Example Explanation
+    //Explanation 1:
+    //
+    // All pairs which are divisible by 2 are (1,3), (1,5), (2,4), (3,5).
+    // So total 4 pairs.
+
+    public static void main(String[] args) {
+        ArrayList<Integer> A = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5));
+        int solve = solve(A, 2);
+        System.out.println(solve);
+    }
+
+    public static int solve(ArrayList<Integer> A, int B) {
+        // A[i]%M + B[i]%M == M
+        // B[i]%M = M - A[i]%M
+
+        long count = 0;
+        int mod = 1000000007;
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        for (int i = 0; i < A.size(); i++) {
+            int aModB = A.get(i) % B;
+            int complement = (B - aModB) % B;
+
+            count = (count + hm.getOrDefault(complement, 0)) % mod;
+            hm.put(aModB, hm.getOrDefault(aModB, 0) + 1);
+        }
+        System.out.println(hm);
+        return (int) count;
+    }
+
+}

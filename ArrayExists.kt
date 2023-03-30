@@ -1,14 +1,6 @@
 package com.demo.scaler
 
 fun main() {
-    val array1 = arrayOf(8, 8, 7, 2, 1, 7, 9)
-    val array2 = arrayOf(14, 8, 2, 7, 7)
-    // Answer: [8, 14]
-
-    val a = array1.intersect(array2.asIterable().toSet())
-    println(a)
-
-    //------------------------
     /**
      * This is my own solution not copied from other sources.
      */

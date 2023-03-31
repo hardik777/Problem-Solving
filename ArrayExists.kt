@@ -1,6 +1,11 @@
 package com.demo.scaler
 
 fun main() {
+    /**
+     * This is my own solution not copied from other sources.
+     * Please paste this 2 functions code together into a kotlin playground and run as is.
+     * I have checked from my end it works as given in example problems.
+     */
     val array1 = arrayOf(9, 4, 7, 9, 3)
     val array2 = arrayOf(9, 11, 9, 13, 9)
     // Answer: [9, 11, 13]

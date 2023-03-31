@@ -40,5 +40,5 @@ fun solve(array1: Array<Int>, array2: Array<Int>) {  //For String array: solve(a
     }
 
     missingElements.sort()
-    println(missingElements)
+    println(missingElements)   // prints: [9, 11, 13]
 }

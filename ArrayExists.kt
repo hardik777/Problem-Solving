@@ -1,10 +1,14 @@
 package com.demo.scaler
 
 fun main() {
-    /**
-     * This is my own solution not copied from other sources.
-     */
+    val array1 = arrayOf(9, 4, 7, 9, 3)
+    val array2 = arrayOf(9, 11, 9, 13, 9)
+    // Answer: [9, 11, 13]
 
+    solve(array1, array2)
+}
+
+fun solve(array1: Array<Int>, array2: Array<Int>) {
     var missingElements = mutableListOf<Int>()
 
     //Map for repeating numbers
@@ -27,5 +31,4 @@ fun main() {
 
     missingElements.sort()
     println(missingElements)
-
 }

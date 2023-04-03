@@ -1,14 +1,11 @@
 package com.demo.scaler
 
-/**
- * You can edit, run, and share this code.
- * play.kotlinlang.org
- */
 fun main() {
     /**
      * This is my own solution not copied from other sources.
-     * Please paste this 2 functions code together into a kotlin playground and run as is.
+     * Please paste All code into a kotlin playground and run as is.
      * I have checked from my end it works as given in example problems.
+     * Works both for int and string array
      */
     val array1 = arrayOf(9, 4, 7, 9, 3)
     val array2 = arrayOf(9, 11, 9, 13, 9)
